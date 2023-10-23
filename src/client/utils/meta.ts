@@ -1,17 +1,16 @@
-import image from '@assets/images/abhishar.jpg';
 const description =
   'Abhishar Jangir is a MERN Stack Developer based in Gurgaon, IN, who specializes in developing websites.';
 
 export default {
   default: {
-    title: 'Abhishar Jangir',
+    title: 'Nurul Islam Tipu',
     description,
-    image,
-    twitter: '@abhishar_jangir',
+    image: 'https://avatars.githubusercontent.com/u/34369548?v=4',
+    twitter: '@<twitter>',
     sep: ' | ',
-    siteURL: 'https://abhisharjangir.com',
+    siteURL: 'nurulislam.dev',
     keywords:
-      'Abhishar Jangir, Abhishar, Jangir, Front end developer, reactjs developer, web developer, mern stack developer, javascript developer, abhisharkjangir,abhishar.jangir, Full Stack Developer',
+      'Nurul, nurul, nurul isalm, nurulislam, nurul dev, nurul islam dev, Full Stack Developer',
     facebookAppId: 'XXXXXXXXX',
     updated: new Date().toDateString(),
     published: new Date().toDateString(),

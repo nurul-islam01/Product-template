@@ -1,18 +1,18 @@
 export const socialList = [
   {
     name: 'github',
-    url: 'https://ssr-portfolio.herokuapp.com/a/redirect/github',
+    url: '<url>',
   },
   {
     name: 'linkedin',
-    url: 'https://ssr-portfolio.herokuapp.com/a/redirect/linkedin',
+    url: '<url>',
   },
   {
     name: 'instagram',
-    url: 'https://ssr-portfolio.herokuapp.com/a/redirect/instagram',
+    url: '<url>',
   },
   {
     name: 'twitter',
-    url: 'https://ssr-portfolio.herokuapp.com/a/redirect/twitter',
+    url: '<url>',
   },
 ];
