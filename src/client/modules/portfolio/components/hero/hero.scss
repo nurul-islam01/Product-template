@@ -1,0 +1,80 @@
+@import '../../styles/common';
+
+// Hero
+.overline {
+  color: var(--c-primary);
+  margin: 0 0 20px 3px;
+  font-size: var(--fs-lg);
+  font-family: var(--font-SFMono);
+  font-weight: 800;
+}
+
+.title {
+  font-size: 80px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 80px;
+  line-height: 0.9;
+  color: var(--c-tertiary);
+}
+
+.description {
+  width: 50%;
+  font-size: var(--fs-24);
+  max-width: 500px;
+
+  a {
+    @extend %inlineLink;
+  }
+}
+
+.getintouch {
+  @extend %bigButton;
+}
+
+@import '../../styles/breakpoints';
+
+@media (max-width: $desktop) {
+  .overline {
+    font-size: var(--fs-sm);
+  }
+
+  .title,
+  .subtitle {
+    font-size: 70px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .overline {
+    font-size: var(--fs-smish);
+  }
+
+  .title,
+  .subtitle {
+    font-size: 60px;
+  }
+
+  .section {
+    padding-top: 150px;
+  }
+}
+
+@media (max-width: $phablet) {
+
+  .title,
+  .subtitle {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: $phone) {
+
+  .title,
+  .subtitle {
+    font-size: 40px;
+  }
+}

@@ -1,0 +1,9 @@
+node_modules
+*.log
+.vscode
+.idea
+.DS_Store
+.history
+public/dist
+*.d.ts
+coverage

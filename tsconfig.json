@@ -1,0 +1,58 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "noEmit": true,
+    "strict": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false, // Remove once we have most of the project converted to typescript
+    "forceConsistentCasingInFileNames": true,
+    "module": "esnext",
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": [
+        "src/*"
+      ],
+      "@client/*": [
+        "src/client/*"
+      ],
+      "@server/*": [
+        "src/server/*"
+      ],
+      "@utils/*": [
+        "src/client/utils/*"
+      ],
+      "@webpack/*": [
+        "webpack/*"
+      ],
+      "@components/*": [
+        "src/client/components/*"
+      ],
+      "@modules/*": [
+        "src/client/modules/*"
+      ],
+      "@assets/*": [
+        "src/client/assets/*"
+      ],
+    },
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "include": [
+    "src",
+    "./jest-setup.ts"
+  ]
+}

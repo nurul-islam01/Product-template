@@ -1,0 +1,167 @@
+@import '../../styles/common';
+
+.header {
+  @extend %flexBetween;
+  position: fixed;
+  top: 0;
+  padding: 0px 50px;
+  background-color: var(--c-secondary);
+  transition: var(--transition);
+  z-index: 11;
+  filter: none !important;
+  pointer-events: auto !important;
+  user-select: auto !important;
+  width: 100%;
+
+  nav {
+    @extend %flexBetween;
+    position: relative;
+    width: 100%;
+    color: var(--c-tertiaryLight);
+    font-family: var(--font-SFMono);
+    counter-reset: item 0;
+    z-index: 12;
+  }
+}
+
+.logo {
+  @extend %flexCenter;
+
+  a {
+    display: block;
+    color: var(--c-primary);
+    width: 42px;
+    height: 42px;
+
+    &:hover,
+    &:focus {
+      svg {
+        fill: var(--c-primaryLight);
+      }
+    }
+
+    svg {
+      fill: none;
+      transition: var(--transition);
+      user-select: none;
+    }
+
+    span {
+      position: absolute;
+      position: absolute;
+      top: 8px;
+      left: 15px;
+    }
+  }
+}
+
+.links {
+  display: flex;
+  align-items: center;
+
+  ol {
+    @extend %flexBetween;
+
+    li {
+      position: relative;
+
+      a {
+        padding: 10px 15px;
+        counter-increment: item 1;
+
+        &:active,
+        &:hover {
+          background-color: var(--c-primaryLight);
+          border-radius: 3px;
+        }
+
+        &:before {
+          content: '0' counter(item) '. ';
+          text-align: right;
+          color: var(--c-primary);
+          font-size: var(--fs-md);
+        }
+      }
+    }
+  }
+}
+
+.resumeButton {
+  @extend %smallButton;
+  margin-left: 10px;
+  font-size: var(--fs-md);
+}
+
+.hamburger {
+  @extend %flexCenter;
+  overflow: visible;
+  margin: 0 -12px 0 0;
+  padding: 15px;
+  cursor: pointer;
+  transition-timing-function: linear;
+  transition-duration: 0.15s;
+  transition-property: opacity, filter;
+  text-transform: none;
+  color: inherit;
+  border: 0;
+  background-color: transparent;
+  display: none;
+}
+
+.hamburgerBox {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 24px;
+}
+
+.hamburgerInner {
+  background-color: var(--c-primary);
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  border-radius: 4px;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transition-duration: 0.22s;
+  transition-property: transform;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    background-color: var(--c-primary);
+    position: absolute;
+    left: auto;
+    right: 0;
+    width: 30px;
+    height: 2px;
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
+    transition-property: transform;
+    border-radius: 4px;
+  }
+}
+
+@import '../../styles/breakpoints';
+
+@media (max-width: $desktop) {
+  .header {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .header {
+    padding: 0 25px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

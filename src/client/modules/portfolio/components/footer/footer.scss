@@ -1,0 +1,74 @@
+@import '../../styles/common';
+
+.footer {
+  @extend %flexCenter;
+  flex-direction: column;
+  padding: 12px;
+  background-color: var(--c-secondaryLight);
+  color: var(--c-tertiary);
+  text-align: center;
+  height: auto;
+  min-height: 70px;
+}
+
+.content {
+  color: var(--c-tertiaryLight);
+  width: 100%;
+  max-width: 300px;
+  margin: 13px 0;
+  font-family: var(--font-SFMono);
+  font-size: var(--fs-xs);
+  line-height: 1;
+
+  a {
+    color: var(--c-tertiaryLight);
+
+    div {
+      margin-top: 10px;
+
+      &>span {
+        display: inline-flex;
+        align-items: center;
+        margin: 0 7px;
+      }
+
+      svg {
+        display: inline-block;
+        height: 15px;
+        width: auto;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.socialContainer {
+  color: var(--c-tertiaryLight);
+  width: 100%;
+  max-width: 270px;
+  margin: 0 auto 10px;
+  display: none;
+  padding: 0 30px;
+
+  .list {
+    @extend %flexBetween;
+    padding: 10px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.heart {
+  color: red;
+}
+
+@import '../../styles/breakpoints';
+
+@media (max-width: $tablet) {
+  .socialContainer {
+    display: block;
+  }
+}

@@ -1,0 +1,96 @@
+@import '../../styles/common';
+
+// Heading
+.heading,
+%heading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 10px 0 40px;
+  width: 100%;
+  white-space: nowrap;
+  font-size: 32px;
+
+  &:before {
+    counter-increment: section;
+    content: '0' counter(section) '.';
+    margin-right: 10px;
+    font-family: var(--font-SFMono);
+    font-weight: normal;
+    color: var(--c-primary);
+    font-size: var(--fs-xl);
+    position: relative;
+    bottom: 4px;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 300px;
+    background-color: var(--c-tertiary);
+    position: relative;
+    top: -5px;
+    margin-left: 20px;
+  }
+}
+
+.headingCenter {
+  @extend %heading;
+  display: block;
+  color: var(--c-primary);
+  font-size: var(--fs-md);
+  font-family: var(--font-SFMono);
+  font-weight: normal;
+  margin-bottom: 20px;
+  justify-content: center;
+
+  &:before {
+    bottom: 0;
+    font-size: var(--fs-sm);
+  }
+
+  &:after {
+    display: none;
+  }
+}
+
+@import '../../styles/breakpoints';
+
+@media (max-width: $desktop) {
+  .heading {
+    &:after {
+      width: 200px;
+    }
+  }
+
+  .headingCenter {
+    font-size: var(--fs-sm);
+
+    &:before {
+      font-size: var(--fs-smish);
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .heading {
+    font-size: 24px;
+
+    &:before {
+      font-size: var(--fs-lg);
+    }
+
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $thone) {
+  .heading {
+    &:after {
+      margin-left: 10px;
+    }
+  }
+}

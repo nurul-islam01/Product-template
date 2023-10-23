@@ -1,0 +1,205 @@
+@import '../../styles/common';
+
+// Jobs
+.jobTabs {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+
+  .tablist {
+    display: block;
+    position: relative;
+    width: max-content;
+    z-index: 3;
+
+    li {
+      button {
+        @extend %link;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background-color: transparent;
+        height: 42px;
+        padding: 0 20px 2px;
+        transition: var(--transition);
+        border-left: 3px solid var(--c-tertiary);
+        text-align: left;
+        white-space: nowrap;
+        font-family: var(--font-SFMono);
+        font-size: var(--fs-smish);
+        color: var(--bg-c-light-grey);
+
+        &:hover,
+        &:focus {
+          background-color: var(--c-secondaryLighter);
+        }
+      }
+    }
+  }
+}
+
+.buttonActive {
+  color: var(--c-primary) !important;
+  border-left: 3px solid var(--c-primary) !important;
+  font-weight: 700;
+}
+
+.jobContent {
+  position: relative;
+  padding-top: 12px;
+  padding-left: 30px;
+}
+
+.jobTabContent {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+
+  ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+
+      &:before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: var(--c-primary);
+        line-height: var(--fs-xl);
+        margin-top: 3px;
+      }
+    }
+  }
+
+  a {
+    @extend %inlineLink;
+  }
+}
+
+.jobTitle {
+  color: var(--c-tertiaryLight);
+  font-size: var(--fs-xxl);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.jobCompany {
+  color: var(--c-primary);
+}
+
+.jobDetail {
+  font-family: var(--font-SFMono);
+  font-size: var(--fs-smish);
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  color: var(--c-tertiaryLight);
+  margin-bottom: 30px;
+
+  svg {
+    width: 15px;
+  }
+}
+
+.jobDescription {
+  ul {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    list-style: none;
+    font-size: var(--fs-lg);
+
+    li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+
+      &:before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: var(--c-primary);
+        line-height: var(--fs-xl);
+      }
+    }
+  }
+}
+
+@import '../../styles/breakpoints';
+
+@media (max-width: $tablet) {
+  .jobContent {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: $thone) {
+  .buttonActive {
+    color: var(--c-primary) !important;
+    border-left-width: 0 !important;
+    border-bottom: 2px solid var(--c-primary) !important;
+  }
+
+  .jobTabs {
+    display: block;
+
+    .tablist {
+      display: flex;
+      overflow-x: scroll;
+      margin-bottom: 30px;
+      width: calc(100% + 100px);
+      margin-left: -50px;
+
+      li {
+        &:first-of-type {
+          margin-left: 50px;
+        }
+
+        &:last-of-type {
+          padding-right: 50px;
+        }
+
+        button {
+          padding: 0 15px;
+          text-align: center;
+          border-left: 0;
+          border-bottom: 2px solid var(--c-tertiary);
+          min-width: 120px;
+        }
+      }
+    }
+  }
+
+  .jobContent {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: $phablet) {
+  .jobTabs {
+    .tablist {
+      width: calc(100% + 50px);
+      margin-left: -25px;
+
+      li {
+        &:first-of-type {
+          margin-left: 25px;
+        }
+
+        &:last-of-type {
+          padding-right: 25px;
+        }
+
+        button {
+          padding: 0 15px 2px;
+        }
+      }
+    }
+  }
+}

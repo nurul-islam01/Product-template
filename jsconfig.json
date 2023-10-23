@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "allowSyntheticDefaultImports": false,
+        "baseUrl": "./",
+        "paths": {
+            "@app/*": [
+                "src/*"
+            ],
+            "@client/*": [
+                "src/client/*"
+            ],
+            "@server/*": [
+                "src/server/*"
+            ],
+            "@utils/*": [
+                "src/client/utils/*"
+            ],
+            "@webpack/*": [
+                "webpack/*"
+            ],
+            "@components/*": [
+                "src/client/components/*"
+            ],
+            "@modules/*": [
+                "src/client/modules/*"
+            ],
+            "@assets/*": [
+                "src/client/assets/*"
+            ],
+        }
+    },
+    "exclude": [
+        "node_modules",
+        "dist"
+    ],
+    "include": [
+        "src"
+    ]
+}

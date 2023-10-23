@@ -1,0 +1,61 @@
+.social {
+  width: 40px;
+  position: fixed;
+  bottom: 0;
+  left: 40px;
+  color: var(--c-tertiaryLight);
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-bottom: 0;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 90px;
+      margin: 0 auto;
+      background-color: var(--c-tertiaryLight);
+    }
+
+    li {
+      display: list-item;
+
+      &:last-of-type {
+        margin-bottom: 20px;
+      }
+
+      a {
+        padding: 10px;
+
+        &:hover,
+        &:focus {
+          transform: translateY(-3px);
+        }
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
+}
+
+@import '../../styles/breakpoints';
+
+@media (max-width: $desktop) {
+  .social {
+    left: 25px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .social {
+    display: none;
+  }
+}
