@@ -1,11 +1,11 @@
 {
-  "name": "portfolio",
-  "description": "Portfolio web app",
+  "name": "Ndev",
+  "description": "Template web app",
   "version": "1.0.0",
   "main": "src/server/index.js",
-  "author": "Abhishar Jangir <abhisharjangir@ymail.com>",
+  "author": "Nurul Islam <nurul.isalm@nurulislam.dev>",
   "contributors": [
-    "Abhishar Jangir"
+    "Nurul Islam Tipu"
   ],
   "license": "MIT",
   "scripts": {

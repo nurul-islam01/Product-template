@@ -35,8 +35,6 @@ loadableReady(() => {
     // attaching event listeners after the initial render
     hydrate(<Application />, rootNode);
   } else {
-    // const root = createRoot(rootNode);
-    //  If we're not running on the server, just render like normal
     render(<Application />, rootNode);
   }
 });

@@ -1,11 +1,11 @@
 module.exports = {
   /**
-   * @author Abhishar Jangir
+   * @author Nurul Islam
    * @description PM2 Application Configuration
    */
   apps: [
     {
-      name: 'portfolio',
+      name: 'nurulislam.dev',
       script: 'server/deploy.js',
       log_date_format: 'YYYY-MM-DD HH:mm Z',
       combine_logs: true,

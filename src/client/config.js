@@ -6,19 +6,19 @@ const ENV_TYPES = {
 
 // For staging Environments
 const STAG_ENV = {
-  URL: 'https://api.abhisharjangir.com/',
+  URL: '<api base url>',
   env: 'Staging',
 };
 
 // For Production Environments
 const PROD_ENV = {
-  URL: 'https://api.abhisharjangir.com/',
+  URL: '<api base url>',
   env: 'Production',
 };
 
 // For Local Environments
 const LOCAL_ENV = {
-  URL: 'https://api.abhisharjangir.com/',
+  URL: '<api base url>',
   env: 'Local',
 };
 

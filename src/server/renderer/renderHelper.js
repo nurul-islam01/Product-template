@@ -10,8 +10,8 @@ const googleAnalyticsScripts = !isDev
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', 'UA-155127051-1');
-</script> <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155127051-1"></script>
+gtag('config', '<gid>');
+</script> <script async src="https://www.googletagmanager.com/gtag/js?id=<gid>"></script>
 `
   : '';
 export const injectHTML = (
