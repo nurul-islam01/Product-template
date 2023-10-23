@@ -1,12 +1,13 @@
 /* eslint-disable global-require */
 /* eslint-disable import/extensions */
+import bodyParser from 'body-parser';
+
 const fs = require('fs');
 const express = require('express');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 const webpackHotServerMiddleware = require('webpack-hot-server-middleware');
-const bodyParser = require('body-parser');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const APIRoutes = require('./routes/index');
