@@ -1,6 +1,4 @@
 import React from 'react';
-import abhishar from '@assets/images/abhishar.jpg';
-import Image from '@components/common/image/image';
 import PrimaryLink from '@components/common/PrimaryLink/PrimaryLink';
 import resume from '@assets/resume.pdf';
 import Heading from '../heading/heading';
@@ -71,7 +69,7 @@ function About() {
         </div>
         <div className={styles.aboutPic}>
           <PrimaryLink to="/" aria-label="Display Picture" internal>
-            <Image src={abhishar} alt="Abhishar Jangir" />
+            {/* <Image src={abhishar} alt="Abhishar Jangir" /> */}
           </PrimaryLink>
         </div>
       </div>

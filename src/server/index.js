@@ -1,6 +1,6 @@
 /* eslint-disable global-require */
 /* eslint-disable import/extensions */
-import bodyParser from 'body-parser';
+const bodyParser = require('body-parser');
 
 const fs = require('fs');
 const express = require('express');
