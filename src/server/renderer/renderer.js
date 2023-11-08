@@ -8,7 +8,7 @@ import { StaticRouter } from 'react-router-dom/server';
 import { ChunkExtractor, ChunkExtractorManager } from '@loadable/server';
 
 import createStore from '@client/store';
-import App from '@components/app/app';
+import App from '@client/app';
 import RouteList from '@client/routes';
 import { setHelmetInfo } from '@components/common/helmet/actions';
 import Meta from '@utils/meta';

@@ -11,8 +11,8 @@ const webpackHotServerMiddleware = require('webpack-hot-server-middleware');
 const compression = require('compression');
 const cookieParser = require('cookie-parser');
 const APIRoutes = require('./routes/index');
-const CONSTANTS = require('./constants/constants');
-const webpackConfig = require('../../webpack/webpack.config');
+const CONSTANTS = require('./constants/constants.js');
+const webpackConfig = require('../../webpack/webpack.config.js');
 
 const DEV = process.env.NODE_ENV === 'development';
 const PORT = process.env.PORT || CONSTANTS.PORT;
@@ -31,7 +31,7 @@ const done = () =>
     isBuilt = true;
     // eslint-disable-next-line no-console
     console.log(
-      `:::::::: Portfolio is runnig at http://localhost:${PORT} ::::::::`
+      `:::::::: Template is runnig at http://localhost:${PORT} ::::::::`
     );
   });
 

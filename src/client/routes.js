@@ -1,7 +1,22 @@
-import portfolioRoutes from '@modules/portfolio/portfolioRoutes';
-import testRoutes from '@modules/portfolio/testRoutes';
-import standAloneAppRoutes from '@modules/standAloneApp/standAloneAppRoutes';
+import React from 'react';
 
-const RouteList = [portfolioRoutes, testRoutes, standAloneAppRoutes];
+import Pages from './components/pages';
+import HomePage from './components/pages/home';
+import NotFoundPage from './components/pages/not-found';
 
-export default RouteList;
+export default [
+  {
+    path: '/',
+    element: <Pages />,
+    childRoutes: [
+      {
+        index: true,
+        element: <HomePage />,
+      },
+      {
+        path: '*',
+        element: <NotFoundPage />,
+      },
+    ],
+  },
+];

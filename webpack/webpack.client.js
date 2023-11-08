@@ -105,11 +105,11 @@ const client = {
   },
   entry: (isProduction = false) => {
     return isProduction
-      ? ['babel-polyfill', pathResolve('../src/client/index.js')]
+      ? ['babel-polyfill', pathResolve('../src/client/start.js')]
       : [
           'babel-polyfill',
           'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=false&quiet=false&noInfo=false',
-          pathResolve('../src/client/index.js'),
+          pathResolve('../src/client/start.js'),
         ];
   },
   resolve,
